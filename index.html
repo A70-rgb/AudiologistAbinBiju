@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Abin Biju | Audiologist &amp; Speech Therapist (BASLP)</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1565c1',
+                        secondary: '#2e7d32',
+                        background: '#ffffff',
+                        surface: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'custom': '8px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style data-purpose="custom-utilities">
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-800 bg-background overflow-x-hidden">
+    <!-- BEGIN: MainHeader -->
+    <header class="fixed top-0 w-full z-50 glass-effect border-b border-slate-100" data-purpose="main-navigation">
+        <nav class="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary rounded-custom flex items-center justify-center text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl leading-none text-primary">Abin Biju</span>
+                    <span class="text-[10px] uppercase tracking-wider font-semibold text-slate-500">Audiologist &amp;
+                        Speech Therapist</span>
+                </div>
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                <a class="hover:text-primary transition-colors" href="./index.html">Home</a>
+                <a class="hover:text-primary transition-colors" href="./about.html">About</a>
+                <a class="hover:text-primary transition-colors" href="./service.html">Services</a>
+                <a class="hover:text-primary transition-colors" href="./articles.html">Blog</a>
+                <a class="hover:text-primary transition-colors" href="./contact.html">Contact</a>
+            </div>
+            <!-- CTA Button -->
+            <div class="flex items-center gap-4">
+                <a class="hidden sm:block bg-primary text-white px-6 py-2.5 rounded-custom font-semibold hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
+                    href="./appointment.html">
+                    Book Appointment
+                </a>
+                <button class="lg:hidden text-slate-600">
+                    <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- END: MainHeader -->
+    <main class="pt-20">
+        <!-- BEGIN: HeroSection -->
+        <section class="hero-gradient py-16 md:py-24" data-purpose="hero-banner">
+            <div class="container mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <span
+                        class="inline-block px-4 py-1.5 bg-blue-50 text-primary rounded-full text-sm font-bold mb-6">Expert
+                        BASLP Care</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-6">
+                        Helping You <span class="text-primary">Hear Better</span> &amp; <span
+                            class="text-secondary">Speak Clearly</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0">
+                        Dedicated to providing comprehensive hearing assessments and personalized speech therapy for
+                        adults and children. Reconnect with the sounds of your life.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                        <a class="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-custom font-bold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+                            href="./appointment.html">
+                            Book Consultation
+                        </a>
+                        <a class="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-custom font-bold text-lg hover:bg-slate-50 transition-all"
+                            href="./articles.html">
+                            Read Blogs
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-100 rounded-full blur-2xl opacity-50"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-green-100 rounded-full blur-2xl opacity-50">
+                    </div>
+                    <img alt="Medical Consultation"
+                        class="rounded-2xl shadow-2xl border-8 border-white object-cover w-full h-[400px] md:h-[500px]"
+                        data-purpose="hero-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJEFDOHUQ3FoxEeFgChPk0X1ytIm2_5dF2nXTugv9swncL13sE066H5S6yubHKIY7MKU5R6p8V6PGt9_Pa7-jpQq_8xuCdwtmoXvb6M6slJldlGNuznYllJqPTkniSDryeUHiAmd80QfOf7v9bjEtiaKO1kQ9AdQlEg0-CKnfN6YCYjLlz93olSOJp_3w9a1bPOZxhQzaH78_hy6K6i7dTWMhsmcJsMREgEDvQ5BM9tuVrqW2azC7IOG106G_kO80cvLfZL781e2EH" />
+                </div>
+            </div>
+        </section>
+        <!-- END: HeroSection -->
+        <!-- BEGIN: AboutPreview -->
+        <section class="py-20 bg-white" data-purpose="about-biography" id="about">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-2/5">
+                        <img alt="Abin Biju - Audiologist" class="rounded-2xl shadow-xl w-full"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA41bhbNEdc6Xk1kQ6wJrS9D-K7INyCROOAjf8MIjZAfW-pyb5heJEbTUNprOFTkg7UMV3a6JWam8eAgRXARru-QZGPSd0v2WO6kTlCFq7gqI3Y2X7IggsGjk3NeozIBIIclj8LsoWgrpqgirCnBQvGq8hr86AxgQRUPJ7BLFHdpJjG9KMHonT5kE1LCPkj1UAJtWyyoiO5RviY37xPz-yvFaYWCTv5DcNIZ7Z7hbhQguYbi-r9cJEY5dp0QZWEBUj1HLYXT1RhxcMR" />
+                    </div>
+                    <div class="lg:w-3/5">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-6">Meet Abin Biju <span
+                                class="text-primary font-medium text-lg block mt-1">(BASLP) Audiologist &amp; Speech
+                                Therapist</span></h2>
+                        <div class="space-y-4 text-slate-600 text-lg">
+                            <p>With over <span class="font-bold text-primary">4+ years of clinical experience</span>,
+                                Abin Biju has dedicated his career to improving the communication abilities of
+                                individuals across all age groups.</p>
+                            <p>Having served at esteemed institutions like <span class="font-semibold italic">Kusumagiri
+                                    Mental Health Centre</span> and <span class="font-semibold italic">Padashala</span>,
+                                he brings a wealth of specialized knowledge in both rehabilitative audiology and speech
+                                pathology.</p>
+                            <p>His approach combines clinical excellence with compassionate, patient-centered care,
+                                ensuring that every individual receives a therapy plan as unique as their own voice.</p>
+                        </div>
+                        <div class="mt-8 grid grid-cols-2 gap-6">
+                            <div class="p-4 bg-slate-50 rounded-custom">
+                                <span class="block text-2xl font-bold text-primary">500+</span>
+                                <span class="text-sm text-slate-500 font-medium uppercase">Patients Treated</span>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-custom">
+                                <span class="block text-2xl font-bold text-primary">4+ Years</span>
+                                <span class="text-sm text-slate-500 font-medium uppercase">Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: AboutPreview -->
+        <!-- BEGIN: ServicesOverview -->
+        <section class="py-20 bg-surface" data-purpose="services-listing" id="services">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Comprehensive Care Services</h2>
+                    <p class="text-slate-600">Professional diagnosis and treatment strategies for all speech, language,
+                        and hearing concerns.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="service-card bg-white p-8 rounded-custom shadow-sm border border-slate-100"
+                        data-purpose="service-card">
+                        <div
+                            class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-6">
+                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Hearing Assessment</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Advanced diagnostic tests to evaluate hearing
+                            thresholds and identify types of hearing loss.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="service-card bg-white p-8 rounded-custom shadow-sm border border-slate-100"
+                        data-purpose="service-card">
+                        <div
+                            class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center text-secondary mb-6">
+                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Speech Therapy</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Evidence-based therapy for adults dealing with
+                            stuttering, articulation, or voice disorders.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="service-card bg-white p-8 rounded-custom shadow-sm border border-slate-100"
+                        data-purpose="service-card">
+                        <div
+                            class="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-orange-500 mb-6">
+                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Pediatric Therapy</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Child-friendly sessions addressing
+                            developmental delays, autism-related speech challenges, and ADHD.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="service-card bg-white p-8 rounded-custom shadow-sm border border-slate-100"
+                        data-purpose="service-card">
+                        <div
+                            class="w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center text-purple-600 mb-6">
+                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Hearing Aid Consultation</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Expert guidance on selecting, fitting, and
+                            maintaining the latest digital hearing technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: ServicesOverview -->
+        <!-- BEGIN: WhyChooseUs -->
+        <section class="py-20 bg-white" data-purpose="benefits">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="bg-primary rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 p-8 md:p-16 text-white">
+                        <h2 class="text-3xl font-bold mb-8">Why Choose Abin Biju?</h2>
+                        <div class="space-y-8">
+                            <div class="flex gap-4">
+                                <div class="shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                                    <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Experienced Specialist</h4>
+                                    <p class="text-blue-100 text-sm">Certified BASLP professional with years of
+                                        hospital-grade clinical practice.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                                    <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Personalized Therapy</h4>
+                                    <p class="text-blue-100 text-sm">Every treatment plan is custom-built based on
+                                        detailed diagnostic findings.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                                    <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Modern Evaluation</h4>
+                                    <p class="text-blue-100 text-sm">Utilizing the latest digital equipment for
+                                        high-precision hearing and speech metrics.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                                    <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Child-Friendly</h4>
+                                    <p class="text-blue-100 text-sm">A warm, welcoming environment designed to make
+                                        children feel safe and comfortable.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative min-h-[300px]">
+                        <img alt="Modern Medical Facility" class="absolute inset-0 w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOFGwqLTuUIqJClvR57m-VBO6g35MukYjQ4ZUBoX8wQGtTUOqMGOweH7WQ4CWb8h_hq10oM3D5XpWXjSHonDOlT_mjXXJrtzlXXgqI1hlVuStjGuiKci85Keduwxl6TgfRdHFhUS7attDV_CtOahOkGvhquwGvA8EyNtTGR8rGpxedBlAtO57kjWYIO1r52crsGI0E1Bx35H0IZP3p6AU0OIj596tNMEA1uUWTIJp9K2V-6QW1_wZrCk8c8deAyJygB8CNL81zN7FU" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: WhyChooseUs -->
+        <!-- BEGIN: BlogSection -->
+        <section class="py-20 bg-surface" data-purpose="blog-preview" id="blog">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-2">Latest Insights</h2>
+                        <p class="text-slate-600">Educational resources for your hearing and speech health.</p>
+                    </div>
+                    <a class="hidden md:block text-primary font-bold hover:underline" href="#">View All Posts →</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Blog Card 1 -->
+                    <article
+                        class="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+                        <img alt="Hearing Loss" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuANQMzA9bHKT8jKND6fQvDRBoQbGYgd-uhwOoeYTuuwEWJV4Bi5Pm-XB3PlZJmO_uigRobSh_PEzRMWjSRsLJUbQ3mq4NhZow95U2q7uF-EtYIvcugGyfrEfnxtOxKoXkxicqSuQR3KapScvPGk0ckQK70szmrU6dm2V9ArIjtv1EIrn7pPBwXvTTujUAhgYqPFJjT1NXpTR0ELZoWh_G6wPDGNiW4oezoTMfYosAjM6RwPu9fKlWCq-aTAKXS1iNHax1GoOlOkoDBT" />
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-bold text-primary uppercase tracking-widest">Hearing Health</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3">Early Signs of Hearing Loss: What to Watch For</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">Recognizing the subtle shifts in your hearing
+                                can make a massive difference in long-term outcomes...</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a class="text-slate-900 font-bold text-sm hover:text-primary transition-colors"
+                                href="#">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Blog Card 2 -->
+                    <article
+                        class="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+                        <img alt="Speech Development" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1I95eDp50S8F6ZrAeqF_t5wt6WzJQGaPrhUZisrnHaWR6ZGW4onH3wCEjSYYt6GU27kJV0dVS_gA5CXvA5uS67EZrZd4x3M7jlFWhlKf8G55LwMRIWciXSF5UI7p58pyrRShRrWKarrE_sle8-3VWuqr260g0BD7LqbaBNl2MErCNPbH4OKrM8YiAld9K3l52G7euTmKoc5bqWQIuVqiWCFEkrEBYbJpAaTDu-1od25TBdmBI8v9ygshaXUBpdTcC8_VhbBgxLYRO" />
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-bold text-secondary uppercase tracking-widest">Pediatrics</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3">Milestones in Toddler Speech Development</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">Understanding when your child should be
+                                reaching specific communication milestones at ages 1, 2, and 3...</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a class="text-slate-900 font-bold text-sm hover:text-primary transition-colors"
+                                href="#">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Blog Card 3 -->
+                    <article
+                        class="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+                        <img alt="Hearing Aid Tech" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbtAnyLGzMEfBmA6foe5XouhxRqWDrjVL6v9WqihoJiI9MekHbUJtx_pTcCDfWGl7PSy59yB9HU7uhtIzBK_DnV1DCU34kIisLGCqRhSMkpaSIQhB-wwwdNb5xApXGnyyIChQOb14udbSUennnNUShZCb84kS1SpOS_w0Bzw8cMEzKY2XHvJ1JyBBD2MEwOoKqe6FOaI1lQQGhXy8UmGdtRAQCZdpcHGIWTwMKZiR6py8c-SPIte9Jq4Fx_avLQmcx4jUYu8rG2xCU" />
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-bold text-purple-600 uppercase tracking-widest">Technology</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3">Modern Hearing Aids: Beyond Just Amplification</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">Exploring AI-driven features and Bluetooth
+                                connectivity in the latest hearing aid models available today...</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a class="text-slate-900 font-bold text-sm hover:text-primary transition-colors"
+                                href="#">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- END: BlogSection -->
+        <!-- BEGIN: Testimonials -->
+        <section class="py-20 bg-white" data-purpose="testimonials">
+            <div class="container mx-auto px-4 md:px-6">
+                <h2 class="text-3xl font-bold text-center text-slate-900 mb-16">What Our Patients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-8 bg-blue-50/50 rounded-2xl relative">
+                        <div class="text-primary opacity-20 absolute top-4 right-8">
+                            <svg class="h-12 w-12" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.851h5v10h-11zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.851h5v10h-11z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="italic text-slate-700 mb-6">"Abin's approach to my son's speech delay was incredibly
+                            gentle and effective. We saw improvement within weeks!"</p>
+                        <div class="font-bold">- Sarah M., Parent</div>
+                    </div>
+                    <div class="p-8 bg-green-50/50 rounded-2xl relative">
+                        <div class="text-secondary opacity-20 absolute top-4 right-8">
+                            <svg class="h-12 w-12" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.851h5v10h-11zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.851h5v10h-11z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="italic text-slate-700 mb-6">"Finally a clinic where they explain everything clearly.
+                            My new hearing aids have changed my life."</p>
+                        <div class="font-bold">- George K., Retired Officer</div>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-2xl relative lg:hidden xl:block">
+                        <div class="text-slate-300 opacity-20 absolute top-4 right-8">
+                            <svg class="h-12 w-12" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.851h5v10h-11zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.851h5v10h-11z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="italic text-slate-700 mb-6">"Professional, punctual, and highly knowledgeable. Abin is
+                            the best in Kollam for any speech related concerns."</p>
+                        <div class="font-bold">- Rahul V., Engineer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Testimonials -->
+        <!-- BEGIN: ContactCTA -->
+        <section class="py-16 md:py-24" data-purpose="call-to-action-section" id="contact">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="bg-slate-900 rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full -mr-32 -mt-32 blur-3xl">
+                    </div>
+                    <div class="relative z-10">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to improve your quality of life?</h2>
+                        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">Book an appointment today for a
+                            comprehensive evaluation at our Pattazhy clinic.</p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                            <a class="flex items-center gap-3 bg-primary px-8 py-4 rounded-custom font-bold text-lg hover:scale-105 transition-transform"
+                                href="tel:+919745536541">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                                Call +91 9745536541
+                            </a>
+                            <a class="bg-white/10 hover:bg-white/20 border border-white/20 px-8 py-4 rounded-custom font-bold text-lg transition-colors"
+                                href="./appointment.html">
+                                Online Booking
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: ContactCTA -->
+    </main>
+    <!-- BEGIN: Footer -->
+    <footer class="bg-slate-50 pt-20 pb-10 border-t border-slate-200" data-purpose="site-footer">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Logo & Bio -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-primary rounded-custom flex items-center justify-center text-white">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="font-bold text-xl text-slate-900">Abin Biju</span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">Dedicated BASLP professional specializing in
+                        audiometric testing and speech-language therapy with a focus on holistic patient care.</p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-slate-400 hover:text-primary transition-colors border border-slate-100"
+                            href="#">
+                            <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-slate-400 hover:text-primary transition-colors border border-slate-100"
+                            href="#">
+                            <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="./about.html">About Me</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="./service.html">Our Services</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Speech Disorders</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Hearing Assessments</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="./articles.html">Medical Blog</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6">Reach Us</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="h-5 w-5 text-primary shrink-0" fill="none" stroke="currentColor"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                            <span>Near Primary Health Centre, Pattazhy, Kollam, Kerala - 691522</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="h-5 w-5 text-primary shrink-0" fill="none" stroke="currentColor"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                            <span>+91 9745536541</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="h-5 w-5 text-primary shrink-0" fill="none" stroke="currentColor"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                            <span>contact@abinbiju.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Map Placeholder/Newsletter -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6">Newsletter</h4>
+                    <p class="text-sm text-slate-500 mb-4">Get tips on speech and hearing health.</p>
+                    <div class="flex gap-2">
+                        <input class="w-full rounded-custom border-slate-200 text-sm px-4 py-2 focus:ring-primary"
+                            placeholder="Email" type="email" />
+                        <button class="bg-primary text-white p-2 rounded-custom">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-200 pt-10 text-center text-slate-400 text-xs">
+                © 2023 Abin Biju. All Rights Reserved. Reg: BASLP Certified Audiologist.
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+</body>
+
+</html>
