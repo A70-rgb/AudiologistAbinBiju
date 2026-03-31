@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Connect - Speech-Language Pathologist</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#2E3A8C',
+                            dark: '#1a2450',
+                            pink: '#E96A7D',
+                            light: '#FDF2F5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: #475569; line-height: 1.7; }
+        
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .nav-item { position: relative; }
+        .nav-item::after {
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 0; height: 2px; background: #E96A7D; transition: width 0.3s ease;
+        }
+        .nav-item:hover::after { width: 100%; }
+        
+        .btn-pink { background: #E96A7D; transition: all 0.3s ease; }
+        .btn-pink:hover { background: #d5586a; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(233, 106, 125, 0.4); }
+        
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(46, 58, 140, 0.15); }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Top Header Strip -->
+    <div class="bg-brand-blue text-white text-sm py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end items-center gap-4 sm:gap-6">
+            <a href="tel:+919745536541" class="flex items-center gap-2 hover:text-pink-200 transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.1 14.984c-.298 0-.582-.072-.84-.202l-1.452-.726c-.484-.242-.99-.303-1.492-.181-.323.078-.63.242-.901.473-.424.36-.779.793-1.058 1.292-.278.5-.485 1.03-.622 1.576-.137.546-.176 1.108-.117 1.67.12 1.134.612 2.154 1.388 2.878.775.724 1.794 1.266 2.878 1.386.562.06 1.124-.02 1.67-.117.546-.137 1.076-.344 1.576-.622.5-.279.932-.634 1.292-1.058.231-.271.395-.578.473-.901.122-.502.061-1.008-.181-1.492l-.726-1.452c-.13-.258-.202-.542-.202-.84 0-.298.072-.582.202-.84l.759-1.492c.16-.315.19-.666.085-.992-.105-.326-.333-.615-.635-.837-.302-.222-.655-.33-1.003-.306l-1.653.115c-.29.02-.565-.055-.795-.21-.23-.155-.42-.366-.55-.61l-1.275-2.383c-.17-.32-.233-.67-.185-1.008.048-.339.185-.65.395-.9.21-.25.49-.448.807-.572.317-.125.66-.165 1.004-.117l2.455.343c.306.043.6.163.86.352.26.19.472.44.622.735l.952 1.868c.103.202.271.366.472.462.201.096.423.138.635.116.212-.022.413-.11.575-.252.162-.142.282-.327.345-.53l1.003-1.968z"/></svg>
+                <span class="hidden sm:inline">+91 9745536541</span>
+            </a>
+            <a href="https://wa.me/919745536541" target="_blank" class="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors whitespace-nowrap">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.143c1.589.943 3.385 1.44 5.215 1.441 5.45.002 9.885-4.434 9.888-9.884.002-2.64-1.03-5.123-2.906-7-1.875-1.875-4.359-2.907-7-2.908-5.448 0-9.886 4.436-9.889 9.885-.001 1.93.558 3.811 1.614 5.412l-1.031 3.766 3.863-1.012zm11.411-7.058c-.3-.15-1.769-.872-2.044-.971-.275-.1-.475-.15-.675.15-.2.3-.775 1.019-.95 1.218-.175.199-.35.223-.65.073-.3-.15-1.267-.467-2.413-1.49-.893-.796-1.493-1.78-1.668-2.08-.175-.3-.018-.463.13-.611.134-.132.3-.349.45-.524.15-.174.2-.3.3-.5.1-.2.05-.375-.025-.524-.075-.15-.675-1.625-.925-2.225-.244-.588-.492-.51-.675-.52l-.575-.01c-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.899 1.225 3.099.15.2 2.115 3.227 5.124 4.524.715.308 1.275.492 1.71.632.718.228 1.372.196 1.89.119.578-.085 1.77-.723 2.02-1.42.25-.697.25-1.294.175-1.419-.075-.125-.275-.199-.575-.349z"/></svg>
+                <span class="hidden sm:inline">Chat on WhatsApp</span>
+                <span class="sm:hidden">WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 lg:h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-9 lg:w-10 bg-brand-blue rounded-lg flex items-center justify-center">
+                        <svg class="w-5 lg:w-6 h-5 lg:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold text-lg lg:text-xl text-brand-blue">Connect</span>
+                </div>
+                
+                <!-- Center Menu -->
+                <div class="hidden lg:flex items-center gap-0.5">
+                    <div class="dropdown relative">
+                        <button class="nav-item px-4 py-2 text-slate-700 font-medium text-sm flex items-center gap-1">
+                            Occupational Therapy
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-100 py-2">
+                            <a href="#" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Pediatric OT</a>
+                            <a href="#" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Sensory Integration</a>
+                            <a href="#" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Hand Therapy</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="nav-item px-4 py-2 text-slate-700 font-medium text-sm flex items-center gap-1">
+                            Speech Therapy
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-100 py-2">
+                            <a href="services.html" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Articulation Therapy</a>
+                            <a href="services.html" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Fluency Therapy</a>
+                            <a href="services.html" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Language Therapy</a>
+                            <a href="services.html" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">AAC</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="nav-item px-4 py-2 text-slate-700 font-medium text-sm flex items-center gap-1">
+                            About Us
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-100 py-2">
+                            <a href="about.html" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Our Story</a>
+                            <a href="#" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Mission & Vision</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="nav-item px-4 py-2 text-slate-700 font-medium text-sm flex items-center gap-1">
+                            Professionals
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-100 py-2">
+                            <a href="about.html" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Our Team</a>
+                            <a href="#" class="block px-4 py-2 text-slate-600 hover:bg-brand-light hover:text-brand-pink text-sm">Careers</a>
+                        </div>
+                    </div>
+                    
+                    <a href="articles.html" class="nav-item px-4 py-2 text-slate-700 font-medium text-sm">Blog</a>
+                    
+                    <a href="contact.html" class="nav-item px-4 py-2 text-slate-700 font-medium text-sm">Contact Us</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="appointment.html" class="hidden sm:inline-flex btn-pink text-white px-5 lg:px-6 py-2.5 lg:py-3 rounded-full font-semibold text-sm">Book Appointment</a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-slate-600 p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100">
+            <div class="px-4 py-4 space-y-3">
+                <div class="dropdown">
+                    <button class="flex items-center justify-between w-full text-slate-600 py-2 font-medium" onclick="this.parentElement.querySelector('.mobile-dropdown').classList.toggle('hidden')">
+                        Occupational Therapy
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="mobile-dropdown hidden pl-4 space-y-2">
+                        <a href="#" class="block text-slate-500 py-1 text-sm">Pediatric OT</a>
+                        <a href="#" class="block text-slate-500 py-1 text-sm">Sensory Integration</a>
+                        <a href="#" class="block text-slate-500 py-1 text-sm">Hand Therapy</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="flex items-center justify-between w-full text-slate-600 py-2 font-medium" onclick="this.parentElement.querySelector('.mobile-dropdown').classList.toggle('hidden')">
+                        Speech Therapy
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="mobile-dropdown hidden pl-4 space-y-2">
+                        <a href="services.html" class="block text-slate-500 py-1 text-sm">Articulation Therapy</a>
+                        <a href="services.html" class="block text-slate-500 py-1 text-sm">Fluency Therapy</a>
+                        <a href="services.html" class="block text-slate-500 py-1 text-sm">Language Therapy</a>
+                        <a href="services.html" class="block text-slate-500 py-1 text-sm">AAC</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="flex items-center justify-between w-full text-slate-600 py-2 font-medium" onclick="this.parentElement.querySelector('.mobile-dropdown').classList.toggle('hidden')">
+                        About Us
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="mobile-dropdown hidden pl-4 space-y-2">
+                        <a href="about.html" class="block text-slate-500 py-1 text-sm">Our Story</a>
+                        <a href="#" class="block text-slate-500 py-1 text-sm">Mission & Vision</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="flex items-center justify-between w-full text-slate-600 py-2 font-medium" onclick="this.parentElement.querySelector('.mobile-dropdown').classList.toggle('hidden')">
+                        Professionals
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="mobile-dropdown hidden pl-4 space-y-2">
+                        <a href="about.html" class="block text-slate-500 py-1 text-sm">Our Team</a>
+                        <a href="#" class="block text-slate-500 py-1 text-sm">Careers</a>
+                    </div>
+                </div>
+                <a href="articles.html" class="block text-slate-600 py-2">Blog</a>
+                <a href="contact.html" class="block text-slate-600 py-2">Contact Us</a>
+                <a href="appointment.html" class="block btn-pink text-white px-6 py-3 rounded-full font-semibold text-center">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 bg-brand-light text-brand-pink rounded-full text-sm font-semibold mb-4">About Me</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-6">Meet Abin Biju</h1>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Bilingual Speech-Language Pathologist dedicated to helping patients of all ages find their voice.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-6 bg-brand-light rounded-3xl"></div>
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-brand-blue/20 rounded-full blur-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=700&fit=crop" alt="Abin Biju - Speech-Language Pathologist" class="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-brand-blue rounded-2xl flex items-center justify-center">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-brand-dark text-lg">BASLP Certified</p>
+                                <p class="text-sm text-slate-500">Certified SLP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-bold text-brand-dark mb-6">Restoring Communication,<br>One Patient at a Time</h2>
+                    
+                    <div class="space-y-4 text-slate-600 text-lg mb-8">
+                        <p>Compassionate and experienced <strong>bilingual Speech-Language Pathologist</strong> providing therapy to children and adults in clinical and special needs settings.</p>
+                        <p>With experience at <strong>Kusumagiri Hospital and Autism Centre</strong> and <strong>Padashala Child Development Center</strong>, he brings specialized knowledge in treating ASD, Apraxia, ADHD, and feeding difficulties.</p>
+                        <p>His approach combines clinical excellence with compassionate, patient-centered care, ensuring culturally and linguistically appropriate treatment for every individual.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-brand-light p-4 rounded-xl">
+                            <p class="text-2xl font-bold text-brand-blue">500+</p>
+                            <p class="text-sm text-slate-600">Patients Treated</p>
+                        </div>
+                        <div class="bg-brand-light p-4 rounded-xl">
+                            <p class="text-2xl font-bold text-brand-blue">2+</p>
+                            <p class="text-sm text-slate-600">Years Experience</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full">BASLP</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full">Bilingual</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full">AAC Certified</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full">PROMPT Trained</span>
+                    </div>
+                    
+                    <a href="appointment.html" class="btn-pink text-white px-8 py-4 rounded-full font-semibold inline-block">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-pink font-semibold text-sm tracking-wider uppercase">Professional Profile</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mt-2">Expertise & Skills</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <h3 class="font-bold text-brand-dark mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        Assessment & Diagnosis
+                    </h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li>• Speech and Language Assessment</li>
+                        <li>• Articulation & Phonological Disorders</li>
+                        <li>• Receptive & Expressive Language Therapy</li>
+                        <li>• Apraxia of Speech & Dysarthria</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <h3 class="font-bold text-brand-dark mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        Special Populations
+                    </h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li>• Autism Spectrum Disorder (ASD)</li>
+                        <li>• Pediatric & Adult Speech Therapy</li>
+                        <li>• ADHD Support</li>
+                        <li>• Down Syndrome, Cerebral Palsy</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <h3 class="font-bold text-brand-dark mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        Specialized Interventions
+                    </h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li>• AAC (Avaz) Systems</li>
+                        <li>• Oral Placement Therapy</li>
+                        <li>• Fluency Shaping</li>
+                        <li>• Play-Based Interventions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-pink font-semibold text-sm tracking-wider uppercase">Professional Journey</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mt-2">Work Experience</h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Current Position -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                        <div>
+                            <h3 class="font-bold text-brand-dark text-xl">Bilingual Speech-Language Pathologist</h3>
+                            <p class="text-brand-pink font-medium">Padashala Child Development Center</p>
+                            <p class="text-slate-500 text-sm">Alappuzha, Kerala</p>
+                        </div>
+                        <span class="px-4 py-1 bg-brand-blue text-white text-sm rounded-full">Current</span>
+                    </div>
+                    <p class="text-slate-600">Providing individual and group therapy for children and adults with speech, language, and communication disorders, specializing in bilingual populations. Specialized in AAC systems (Avaz), fluency shaping, oral placement, and feeding therapy.</p>
+                    <p class="text-slate-500 text-sm mt-2">February 2025 – Present</p>
+                </div>
+                
+                <!-- Previous Position -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                        <div>
+                            <h3 class="font-bold text-brand-dark text-xl">Speech-Language Pathologist</h3>
+                            <p class="text-brand-pink font-medium">Kusumagiri Hospital and Autism Centre</p>
+                            <p class="text-slate-500 text-sm">Kochi, Kerala</p>
+                        </div>
+                        <span class="px-4 py-1 bg-slate-400 text-white text-sm rounded-full">Past</span>
+                    </div>
+                    <p class="text-slate-600">Delivered individual and group therapy for individuals with ASD and related conditions. Conducted comprehensive assessments and developed personalized treatment plans. Specialized in AAC, social communication training, and play-based therapy.</p>
+                    <p class="text-slate-500 text-sm mt-2">September 2023 – January 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-6">Education</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Bachelor of Audiology and Speech-Language Pathology (BASLP)</h4>
+                            <p class="text-brand-pink font-medium text-sm">Samvaad Institute of Speech and Hearing, Bangalore</p>
+                            <p class="text-slate-500 text-sm">Bangalore City University | 2019 – 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-6">Certifications</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-pink mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <div>
+                                <p class="font-semibold text-brand-dark">AVAZ Certified AAC Professional (ACAP)</p>
+                                <p class="text-slate-500 text-sm">Avaz India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-pink mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <div>
+                                <p class="font-semibold text-brand-dark">Talktools Oral Placement Therapy (OPT) Level 2</p>
+                                <p class="text-slate-500 text-sm">Instructor: Monica Prudy MA CCC SLP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-pink mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <div>
+                                <p class="font-semibold text-brand-dark">PROMPT Level 1 & 2 Certified</p>
+                                <p class="text-slate-500 text-sm">PROMPT Institute</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-pink mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <div>
+                                <p class="font-semibold text-brand-dark">Certified Therapeutic Play Practitioner</p>
+                                <p class="text-slate-500 text-sm">National Association for Play Therapy India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-pink mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <div>
+                                <p class="font-semibold text-brand-dark">Natural Language Acquisition (NLA) Professional</p>
+                                <p class="text-slate-500 text-sm">Uncleft</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="py-16 bg-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-brand-pink font-semibold text-sm tracking-wider uppercase">Communication</span>
+            <h2 class="text-3xl font-bold text-white mt-2 mb-8">Languages Spoken</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-6 py-3 bg-white/10 border border-white/20 text-white rounded-full font-semibold">English</span>
+                <span class="px-6 py-3 bg-white/10 border border-white/20 text-white rounded-full font-semibold">Malayalam</span>
+                <span class="px-6 py-3 bg-white/10 border border-white/20 text-white rounded-full font-semibold">Kannada</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-brand-blue to-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Start Your Journey?</h2>
+            <p class="text-white/80 text-lg mb-10">Schedule a consultation today and let us help you or your loved one find their voice.</p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="appointment.html" class="bg-brand-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-pink transition-all">Book Appointment</a>
+                <a href="contact.html" class="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-blue transition-all">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-bold text-xl text-white">Connect</span>
+                            <p class="text-xs text-brand-pink font-semibold">Speech-Language Pathology</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md">Compassionate and experienced bilingual Speech-Language Pathologist providing therapy to children and adults.</p>
+                    <a href="https://www.linkedin.com/in/abin-biju-5b8657274" target="_blank" class="text-brand-pink hover:underline">LinkedIn Profile</a>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="about.html" class="hover:text-brand-pink transition-all">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-brand-pink transition-all">Services</a></li>
+                        <li><a href="articles.html" class="hover:text-brand-pink transition-all">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-pink transition-all">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-6">Contact</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-pink" fill="currentColor" viewBox="0 0 24 24"><path d="M20.1 14.984c-.298 0-.582-.072-.84-.202l-1.452-.726c-.484-.242-.99-.303-1.492-.181-.323.078-.63.242-.901.473-.424.36-.779.793-1.058 1.292-.278.5-.485 1.03-.622 1.576-.137.546-.176 1.108-.117 1.67.12 1.134.612 2.154 1.388 2.878.775.724 1.794 1.266 2.878 1.386.562.06 1.124-.02 1.67-.117.546-.137 1.076-.344 1.576-.622.5-.279.932-.634 1.292-1.058.231-.271.395-.578.473-.901.122-.502.061-1.008-.181-1.492l-.726-1.452c-.13-.258-.202-.542-.202-.84 0-.298.072-.582.202-.84l.759-1.492c.16-.315.19-.666.085-.992-.105-.326-.333-.615-.635-.837-.302-.222-.655-.33-1.003-.306l-1.653.115c-.29.02-.565-.055-.795-.21-.23-.155-.42-.366-.55-.61l-1.275-2.383c-.17-.32-.233-.67-.185-1.008.048-.339.185-.65.395-.9.21-.25.49-.448.807-.572.317-.125.66-.165 1.004-.117l2.455.343c.306.043.6.163.86.352.26.19.472.44.622.735l.952 1.868c.103.202.271.366.472.462.201.096.423.138.635.116.212-.022.413-.11.575-.252.162-.142.282-.327.345-.53l1.003-1.968z"/></svg>
+                            <span>+91 9745536541</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <span>abinbijupty@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span>Kerala, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/10 text-center text-slate-500 text-sm">
+                <p>&copy; 2024 Connect Speech-Language Pathology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
